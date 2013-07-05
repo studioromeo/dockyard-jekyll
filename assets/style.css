@@ -35,7 +35,6 @@ p {
 
 a {
 	color: #34495e;
-	text-decoration: none;
 }
 
 a:hover {
@@ -121,23 +120,6 @@ section header a {
 	width: 640px;
 	margin: 1.2em -30px;
 }
-
-/*blockquote {
-	display: block;
-	margin: 30px -30px;
-	background: #ECF0F1;
-	color: #BDC3C7;
-	padding: 30px;
-}*/
-/*
-code {
-	background: #ECF0F1;
-	padding: .2em .5em;
-	font-family: Monaco,Consolas,"Lucida Console",monospace;
-	font-size: .8em;
-	text-transform: lowercase;
-	box-shadow: 2px 2px 0 #BDC3C7;
-}*/
 
 header li {
 	display: inline;
