@@ -4,97 +4,34 @@
 	<meta charset="utf-8" />
 	<title>{{ page.title }}</title>
 	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900'>
-	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 
 <div class="clearfix">
 	<aside>
 		<header>
-			<a href="/"><img src="/logo.png" width="50px"/></a>
+			<a href="/"><img src="/assets/logo.svg" width="50px"/></a>
 		</header>
-		<ul>
-			<li>
-				<span>Preface</span>
-				<ul>
-					<li><a href="/docs/introduction">Introduction</a></li>
-					<li><a href="/docs/contributing">Contributing</a></li>
-				</ul>
-			</li>
-			<li>
-				<span>Getting Started</span>
-				<ul>
-					<li><a href="/docs/installation">Installation</a></li>
-					<li><a href="/docs/configuration">Configuration</a></li>
-					<li><a href="/docs/lifecycle">Request Lifecycle</a></li>
-					<li><a href="/docs/routing">Routing</a></li>
-					<li><a href="/docs/requests">Requests &amp; Input</a></li>
-					<li><a href="/docs/responses">Views &amp; Responses</a></li>
-					<li><a href="/docs/controllers">Controllers</a></li>
-					<li><a href="/docs/errors">Errors &amp; Logging</a></li>
-				</ul>
-			</li>
-			<li>
-				<span>Learning More</span>
-				<ul>
-					<li><a href="/docs/cache">Cache</a></li>
-					<li><a href="/docs/events">Events</a></li>
-					<li><a href="/docs/ioc">IoC Container</a></li>
-					<li><a href="/docs/localization">Localization</a></li>
-					<li><a href="/docs/mail">Mail</a></li>
-					<li><a href="/docs/packages">Package Development</a></li>
-					<li><a href="/docs/pagination">Pagination</a></li>
-					<li><a href="/docs/queues">Queues</a></li>
-					<li><a href="/docs/security">Security</a></li>
-					<li><a href="/docs/session">Session</a></li>
-					<li><a href="/docs/templates">Templates</a></li>
-					<li><a href="/docs/testing">Unit Testing</a></li>
-					<li><a href="/docs/validation">Validation</a></li>
-				</ul>
-			</li>
-			<li>
-				<span>Database</span>
-				<ul>
-					<li><a href="/docs/database">Basic Usage</a></li>
-					<li><a href="/docs/queries">Query Builder</a></li>
-					<li><a href="/docs/eloquent">Eloquent ORM</a></li>
-					<li><a href="/docs/schema">Schema Builder</a></li>
-					<li><a href="/docs/migrations">Migrations &amp; Seeding</a></li>
-					<li><a href="/docs/redis">Redis</a></li>
-				</ul>
-			</li>
-			<li>
-				<span>Artisan CLI</span>
-				<ul>
-					<li><a href="/docs/artisan">Overview</a></li>
-					<li><a href="/docs/commands">Development</a></li>
-				</ul>
-			</li>
-			<li>
-				<span>Advanced Topics</span>
-				<ul>
-					<li><a href="#">Architecture</a></li>
-				</ul>
-			</li>
-		</ul>
-
-		<ul>
-			{% for cat in site.categories %}
-			<li>
-				<span>{{ cat[0] }}</span>
-				<ul>
-					{% for post in cat[1] %}
-						<li><a href="{{post.url}}" title="{{post.title}}">{{post.title}}</a></li>
-					{% endfor; %}
-				</ul>
-			</li>
-			{% endfor %}
-		</ul>
+		<nav>
+			<ul>
+				{% for cat in site.categories %}
+				<li>
+					<span>{{ cat[0] }}</span>
+					<ul>
+						{% for post in cat[1] %}
+							<li><a href="{{post.url}}" title="{{post.title}}">{{post.title}}</a></li>
+						{% endfor; %}
+					</ul>
+				</li>
+				{% endfor %}
+			</ul>
+		</nav>
 	</aside>
 
 	<section class="sheet answer">
-  	<header class="ribbon">{{page.title}}</header>
-  	{{content}}
+		<header class="ribbon">{{page.title}}</header>
+		{{content}}
 	</section>
 </div>
 </body>
