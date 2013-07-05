@@ -1,7 +1,5 @@
-Dockyard for Jekyll
-======
-
-##Dockyard is a Jekyll site built for documentation.
+Dockyard is a Jekyll site built for documentation.
+--------------------------------------------------
 It's designed to have a simple and intuative user interface that gets to the point.
 
 Installation
@@ -15,4 +13,5 @@ To create a new article, create a new file with the format **YYYY-MM-DD-your-tit
 
 That's not all
 This was designed to be a running project. If there's something you'd like me to add feel free to open an issue
+
 Cheerio!
